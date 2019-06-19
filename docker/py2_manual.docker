@@ -4,7 +4,7 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install --only-binary=numpy,scipy numpy scipy
 RUN pip install matplotlib
 ENV CFLAGS="-I/usr/include/hdf5/serial -L/usr/lib/x86_64-linux-gnu/hdf5/serial"
-RUN pip install git+https://github.com/h5py/h5py
+RUN pip install h5py
 RUN pip install git+https://github.com/kiyo-masui/bitshuffle
 ADD . /code
 WORKDIR /code
