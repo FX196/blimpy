@@ -1,5 +1,5 @@
 FROM kernsuite/base:3
-RUN sudo apt-get update
+RUN apt-get update
 RUN docker-apt-install libhdf5-serial-dev gfortran python-pip git
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install --only-binary=numpy,scipy numpy scipy
