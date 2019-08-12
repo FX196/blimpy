@@ -47,17 +47,16 @@ else:
 logging.basicConfig(format=format,stream=stream,level = level_log)
 
 
-try:
-    HAS_BITSHUFFLE = True
-    import bitshuffle.h5
-except ImportError:
-    try:
-        import hdf5plugin
-        logger.warning('Could not import bitshuffle, using hdf5plugin failover. Write access disabled.')
-    except ImportError:
-        pass
-    HAS_BITSHUFFLE = False
-    pass
+# try:
+#     HAS_BITSHUFFLE = True
+#     import bitshuffle.h5
+# except ImportError:
+#     try:
+#         import hdf5plugin
+#         logger.warning('Could not import bitshuffle, using hdf5plugin failover. Write access disabled.')
+#     except ImportError:
+#         pass
+HAS_BITSHUFFLE = False
 
 try:
     import h5py
